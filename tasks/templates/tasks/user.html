@@ -1,0 +1,32 @@
+{% extends 'tasks/main.html' %}
+{% block content %}
+{%  include 'tasks/status.html' %}
+    <h3>Wszystkie zadania:</h3>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md">
+            <div class="card card-body">
+                <table class="table table-sm">
+                    <tr>
+                        <th>Zadanie</th>
+                        <th>Opis zadania</th>
+                    </tr>
+
+                    {%  for task in tasks %}
+
+                    <tr>
+                        <td>{{task.title}}</td>
+                        <td>{{task.description}}</td>
+
+                        <td><a href="{% url 'update_task' %}">Dodaj aktualizację</a></td>
+                    </tr>
+
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

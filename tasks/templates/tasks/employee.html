@@ -1,0 +1,40 @@
+{% extends 'tasks/main.html' %}
+
+{% block content %}
+
+    <h5> Wszystkie aktualizacje:</h5>
+    <br>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <table class="table table-sm">
+                <tr>
+                    <th>Zadanie</th>
+                    <th>Aktualizacje</th>
+                </tr>
+
+                {%  for task in tasks %}
+
+                <tr>
+                    <td>{{task.title}}</td>
+                    <td>{{task.description}}</td>
+                    <td><a href="{% url 'update_task' %}">Dodaj aktualizację</a></td>
+                </tr>
+
+                {% endfor %}
+
+                {%  for taskupdate in taskupdates %}
+                    <tr>
+                        <td>{{ taskupdate.task }}</td>
+                        <td>{{ taskupdate.updates }}</td>
+                        <td><a href="{% url 'update_task' %}">Dodaj aktualizację</a></td>
+                    </tr>
+                {% endfor %}
+
+
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

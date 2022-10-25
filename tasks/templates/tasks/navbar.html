@@ -1,0 +1,29 @@
+{% load static %}
+
+
+<style>
+    .hello-msg{
+        font-size: 18px;
+        color: #fff;
+        margin-right: 20px;
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a style="color:whitesmoke" class="navbar-brand">Panel sterowania</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'userPage' %}">Widok ogólny</a>
+      </li>
+      <li class="nav-item">
+      </li>
+    </ul>
+  </div>
+    <span class="hello-msg"> Witaj, {{ request.user }}</span>
+    <span ><a class="hello-msg" href="{%  url 'logout' %}">Wyloguj</a></span>
+
+</nav>
