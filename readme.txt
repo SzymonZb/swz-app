@@ -2,7 +2,7 @@ System wspomagania zarządzania (Management Support System) is an app created fo
 It is also my practice project, to which I want to add more functionalities over time.
 
 Currently app gather information about work in progress from differrent users, created by admin in Django administration. Admin can view all new messages, sent by users,
-in Django administration panel. "It ain't much, but it's honest work" :) I used Django, because of it's flexibility and dozens of already built-in tasks. 
+in Django administration panel. "It ain't much, but it's honest work" :) I used Django, because of its flexibility and dozens of already built-in tasks. 
 Currently I plan to add module organising remote wrok.
 
 App currently work like other apps built with Django, please remember to install requirements.txt. The current databse is set to sqlite3, but settings to PostgreSQL 
